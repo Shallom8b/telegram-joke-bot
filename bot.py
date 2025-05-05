@@ -31,8 +31,8 @@ def send_joke():
     except Exception as e:
         print(f"❌ Telegram error: {e}")
 
-# Schedule joke sending every 2 hours
-schedule.every(2).hours.do(send_joke)
+# Schedule joke sending every 5 minutes
+schedule.every(5).minutes.do(send_joke)
 
 # Run the scheduler in a separate thread
 def run_scheduler():
